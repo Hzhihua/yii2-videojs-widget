@@ -11,7 +11,7 @@
         "videojs",
         "html5 video"
     ],
-    "type": "yii2-widget",
+    "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "support": {
         "issues": "https://github.com/hzhihua/yii2-videojs-widget/issues",
@@ -24,12 +24,13 @@
             "email": "hzhihuaemail@163.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
     	"yiisoft/yii2": "~2.0"
     },
     "autoload": {
     	"psr-4": {
-    		"hzhihua\\videojs\\": "src"
+    		"hzhihua\\videojs\\": "src/"
     	}
     },
     "extra": {
