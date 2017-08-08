@@ -31,5 +31,6 @@
     	"psr-4": {
     		"hzhihua\\videojs\\": "src"
     	}
-    }
+    },
+    "version": "1.0.0"
 }
