@@ -1,6 +1,6 @@
 # yii2-videojs-widget
 基于videojs开发的yii2小部件
-## [videojs官网](http://videojs.com/)[videojsGitHub](https://github.com/videojs/video.js)
+## [videojs官网](http://videojs.com/) [GitHub](https://github.com/videojs/video.js)
 ## 如何安装？？
 ### 在命令行中执行
 ```install
