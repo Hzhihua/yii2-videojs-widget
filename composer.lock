@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e540d285be3cbe26d5f1dbbc49e3b51",
+    "content-hash": "dc0905d79a0babf211bd947245376ac0",
     "packages": [
         {
             "name": "bower-asset/jquery",
@@ -123,22 +123,6 @@
                     "package.json"
                 ]
             }
-        },
-        {
-            "name": "bower-asset/video.js",
-            "version": "v6.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/videojs/video.js.git",
-                "reference": "998c0042cbca62b743df452bb8ffb5e659599589"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/videojs/video.js/zipball/998c0042cbca62b743df452bb8ffb5e659599589",
-                "reference": "998c0042cbca62b743df452bb8ffb5e659599589",
-                "shasum": ""
-            },
-            "type": "bower-asset-library"
         },
         {
             "name": "bower-asset/yii2-pjax",
