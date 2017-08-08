@@ -1,21 +1,21 @@
 # yii2-videojs-widget
 基于videojs开发的yii2小部件
-##[videojs官网](http://videojs.com/)[videojsGitHub](https://github.com/videojs/video.js)
-##如何安装？？
-###在命令行中执行
+## [videojs官网](http://videojs.com/)[videojsGitHub](https://github.com/videojs/video.js)
+## 如何安装？？
+### 在命令行中执行
 ```install
     composer require "hzhihua/yii2-videojs-widget:*"
 ```
-###添加到composer.json
+### 添加到composer.json
 ```install
     "hzhihua/yii2-videojs-widget": "*"
 ```
-##怎么样去使用？？
-###step1
+## 怎么样去使用？？
+### step1
 ```usage
      use hzhihua\videojs\VideoJsWidget;
 ```
-###step2
+### step2
 ```usage
      <?= VideoJsWidget::widget([
              'options' => [  // video tag attibutes
@@ -95,6 +95,6 @@
              ]
          ]); ?>
 ```
-####详见
+#### 详见
 [examples](examples)
 [videojs](https://github.com/videojs/video.js/tree/master/docs/guides)
