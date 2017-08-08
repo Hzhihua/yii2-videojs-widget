@@ -1,0 +1,104 @@
+.vjs-icon-placeholder:before, .vjs-button > .vjs-icon-placeholder:before, .video-js .vjs-modal-dialog, .vjs-modal-dialog .vjs-modal-dialog-content{
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+/* display pause button*/
+.vjs-paused .vjs-big-play-button,
+.vjs-paused.vjs-has-started .vjs-big-play-button {
+    display: block;
+}
+/* 暂停键变圆 */
+.video-js .vjs-big-play-button{
+    font-size: 2.5em;
+    line-height: 2.3em;
+    height: 2.5em;
+    width: 2.5em;
+    -webkit-border-radius: 2.5em;
+    -moz-border-radius: 2.5em;
+    border-radius: 2.5em;
+    background-color: #73859f;
+    background-color: rgba(115,133,159,.5);
+    border-width: 0.15em;
+    margin-top: -1.25em;
+    margin-left: -1.5em;
+}
+/* 中间的播放箭头 */
+.vjs-big-play-button .vjs-icon-placeholder {
+    font-size: 1.63em;
+}
+/* 加载圆圈 */
+.vjs-loading-spinner {
+    font-size: 2.5em;
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
+    margin-top: -1em;
+    margin-left: -1.5em;
+}
+/* 鼠标移进媒体显示为手型 */
+.video-js:hover {
+    cursor: pointer;
+}
+
+.vjs-playback-rate .vjs-playback-rate-value {
+    padding-top: 3px;
+}
+
+.vjs-live .vjs-time-control {
+    display: block; }
+
+.video-js .vjs-current-time,
+.vjs-no-flex .vjs-current-time {
+    display: block;
+    padding: 0;
+}
+
+/*.video-js .vjs-time-control {*/
+    /*display: block;*/
+    /*padding-right: 0;*/
+    /*padding-left: 10px;*/
+/*}*/
+
+/*.video-js .vjs-duration,*/
+/*.vjs-no-flex .vjs-duration {*/
+    /*display: block;*/
+    /*padding: 0;*/
+/*}*/
+
+.vjs-live .vjs-time-divider {
+    display: block; }
+
+.video-js .vjs-hidden {
+    display: none; }
+
+.video-js .vjs-title-bar {
+    color: #fff;
+
+    /*
+      By default, do not show the title bar.
+    */
+    /*
+  display: none;
+  */
+    display: block;
+    font-size: 2em;
+    padding: .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 80px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/*
+  Only show the title bar after playback has begun (so as not to hide
+  the big play button) and only when paused or when the user is
+  interacting with the player.
+*/
+.video-js.vjs-paused.vjs-has-started .vjs-title-bar,
+.video-js.vjs-user-active.vjs-has-started .vjs-title-bar{
+    display: block;
+}

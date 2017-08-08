@@ -1,0 +1,50 @@
+{
+    "name": "hzhihua/yii2-videojs-widget",
+    "description": "yii2 videojs 小部件",
+    "keywords": [
+        "yii2-videojs-widget",
+        "yii2",
+        "yii2-widget",
+        "yii2-extension",
+        "yii2-videojs-widget",
+        "yii2-videojs",
+        "videojs",
+        "html5 video"
+    ],
+    "type": "yii2-widget",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/hzhihua/yii2-videojs-widget/issues",
+        "wiki": "https://github.com/hzhihua/yii2-videojs-widget/wiki/",
+        "source": "https://github.com/hzhihua/yii2-videojs-widget"
+    },
+    "authors": [
+        {
+            "name": "hzhihua",
+            "email": "hzhihuaemail@163.com"
+        }
+    ],
+    "require": {
+    	"yiisoft/yii2": "~2.0",
+    	"bower-asset/video.js": "~6.0"
+    },
+    "autoload": {
+    	"psr-4": {
+    		"hzhihua\\videojs\\": "src"
+    	}
+    },
+    "config": {
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            },
+            "ignore-files": {
+                "bower-asset/video.js": [
+                    "*/**",
+                    "!dist/*"
+                ]
+            }
+        }
+    }
+}

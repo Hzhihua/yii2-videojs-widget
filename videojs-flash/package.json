@@ -1,0 +1,176 @@
+{
+  "_args": [
+    [
+      "videojs-flash@^2.0.0",
+      "/home/hzhihua/myproject/video.js"
+    ]
+  ],
+  "_from": "videojs-flash@>=2.0.0 <3.0.0",
+  "_id": "videojs-flash@2.0.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/videojs-flash",
+  "_nodeVersion": "4.4.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/videojs-flash-2.0.1.tgz_1501167131401_0.6513630079571158"
+  },
+  "_npmUser": {
+    "email": "me@gkatsev.com",
+    "name": "gkatsev"
+  },
+  "_npmVersion": "2.15.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "videojs-flash",
+    "raw": "videojs-flash@^2.0.0",
+    "rawSpec": "^2.0.0",
+    "scope": null,
+    "spec": ">=2.0.0 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/videojs-flash/-/videojs-flash-2.0.1.tgz",
+  "_shasum": "311331a98933e5935329de3e7f4069ab68743c28",
+  "_shrinkwrap": null,
+  "_spec": "videojs-flash@^2.0.0",
+  "_where": "/home/hzhihua/myproject/video.js",
+  "author": {
+    "name": "Brightcove, Inc."
+  },
+  "bugs": {
+    "url": "https://github.com/videojs/videojs-flash/issues"
+  },
+  "dependencies": {
+    "global": "^4.3.2",
+    "video.js": "^6.1.0",
+    "videojs-swf": "5.4.1"
+  },
+  "description": "The official Flash tech package for Video.js.",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-es3": "^1.0.1",
+    "bannerize": "^1.0.2",
+    "conventional-changelog-cli": "^1.3.1",
+    "conventional-changelog-videojs": "^3.0.0",
+    "es5-shim": "^4.5.9",
+    "husky": "^0.13.3",
+    "karma": "~1.3.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-detect-browsers": "^2.2.5",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-qunit": "^1.2.1",
+    "karma-safari-launcher": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "node-static": "^0.7.9",
+    "npm-run-all": "^4.0.2",
+    "qunitjs": "^1.21.0",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.1.1",
+    "rollup-plugin-multi-entry": "^2.0.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^3.2.2",
+    "semver": "^5.3.0",
+    "sinon": "^2.2.0",
+    "uglify-js": "^3.0.7",
+    "videojs-standard": "^6.0.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "311331a98933e5935329de3e7f4069ab68743c28",
+    "tarball": "https://registry.npmjs.org/videojs-flash/-/videojs-flash-2.0.1.tgz"
+  },
+  "engines": {
+    "node": ">=4.4.0"
+  },
+  "files": [
+    "CONTRIBUTING.md",
+    "dist/",
+    "docs/",
+    "index.html",
+    "scripts/",
+    "src/",
+    "test/"
+  ],
+  "generator-videojs-plugin": {
+    "version": "5.0.0"
+  },
+  "gitHead": "0ee005569da4d05ea06814f0f123b149e0e5ebef",
+  "homepage": "https://github.com/videojs/videojs-flash#readme",
+  "keywords": [
+    "videojs",
+    "videojs-plugin",
+    "videojs-tech"
+  ],
+  "license": "Apache-2.0",
+  "main": "dist/videojs-flash.cjs.js",
+  "maintainers": [
+    {
+      "name": "misteroneill",
+      "email": "pgoneill@gmail.com"
+    },
+    {
+      "name": "dmlap",
+      "email": "dlapalomento@gmail.com"
+    },
+    {
+      "name": "gkatsev",
+      "email": "me@gkatsev.com"
+    },
+    {
+      "name": "brandonocasey",
+      "email": "brandonocasey@gmail.com"
+    }
+  ],
+  "module": "dist/videojs-flash.es.js",
+  "name": "videojs-flash",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/videojs/videojs-flash.git"
+  },
+  "scripts": {
+    "build": "npm-run-all -p build:*",
+    "build:js": "npm-run-all build:js:rollup-modules build:js:rollup-umd build:js:bannerize build:js:uglify",
+    "build:js:bannerize": "bannerize dist/videojs-flash.js --banner=scripts/banner.ejs",
+    "build:js:rollup-modules": "rollup -c scripts/modules.rollup.config.js",
+    "build:js:rollup-umd": "rollup -c scripts/umd.rollup.config.js",
+    "build:js:uglify": "uglifyjs dist/videojs-flash.js --comments --mangle --compress --ie8 -o dist/videojs-flash.min.js",
+    "build:test": "rollup -c scripts/test.rollup.config.js",
+    "clean": "rimraf dist test/dist",
+    "lint": "vjsstandard",
+    "postclean": "mkdirp dist test/dist",
+    "prebuild": "npm run clean",
+    "prepublish": "npm run build",
+    "prepush": "npm run lint",
+    "prestart": "npm run build",
+    "pretest": "npm-run-all lint build",
+    "preversion": "npm test",
+    "start": "npm-run-all -p start:server watch",
+    "start:server": "static -a 0.0.0.0 -p 9999 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' .",
+    "test": "karma start test/karma.conf.js",
+    "version": "node scripts/version.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:js-modules": "rollup -c scripts/modules.rollup.config.js -w",
+    "watch:js-umd": "rollup -c scripts/umd.rollup.config.js -w",
+    "watch:test": "rollup -c scripts/test.rollup.config.js -w"
+  },
+  "version": "2.0.1",
+  "vjsstandard": {
+    "ignore": [
+      "dist",
+      "docs",
+      "test/dist",
+      "test/karma.conf.js"
+    ]
+  }
+}
