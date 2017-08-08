@@ -3,13 +3,8 @@
     "description": "yii2 videojs 小部件",
     "keywords": [
         "yii2-videojs-widget",
-        "yii2",
         "yii2-widget",
-        "yii2-extension",
-        "yii2-videojs-widget",
-        "yii2-videojs",
-        "videojs",
-        "html5 video"
+        "videojs"
     ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
@@ -24,7 +19,6 @@
             "email": "hzhihuaemail@163.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
     	"yiisoft/yii2": "~2.0"
     },
@@ -32,10 +26,5 @@
     	"psr-4": {
     		"hzhihua\\videojs\\": "src/"
     	}
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
     }
 }
