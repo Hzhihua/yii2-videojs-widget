@@ -209,7 +209,7 @@ class VideoJsWidget extends \yii\base\Widget
     {
         $jsonOption = Json::encode($this->jsOptions);
 
-        $js = "\$('.{$this->eachSeletor}').each(function () {";
+        $js = ";\$('.{$this->eachSeletor}').each(function () {";
 
         if ($this->initFunction) {
             $js .= "var player = videojs('#'+this.id, $jsonOption, {$this->initFunction});";
