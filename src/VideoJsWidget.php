@@ -97,7 +97,7 @@ class VideoJsWidget extends \yii\base\Widget
      * 确保js只注册一次
      * @var int
      */
-    protected static $hasRegisted = 0;
+    protected static $hasRegistered = 0;
 
     /**
      * 初始化变量
@@ -121,8 +121,8 @@ class VideoJsWidget extends \yii\base\Widget
     {
         parent::run();
 
-        if (!static::$hasRegisted) {
-            static::$hasRegisted++;
+        if (!static::$hasRegistered) {
+            static::$hasRegistered++;
 
             $this->registerAsset();
             $this->registerJs();
