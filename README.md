@@ -14,11 +14,11 @@
 ## 如何安装？？
 ### 在命令行中执行
 ```install
-    composer require "hzhihua/yii2-videojs-widget:*"
+    composer require --prefer-dist hzhihua/yii2-videojs-widget "~1.0"
 ```
 ### 或者直接添加到composer.json
 ```install
-    "hzhihua/yii2-videojs-widget": "*"
+    "hzhihua/yii2-videojs-widget": "~1.0"
 ```
 ## 怎么样去使用？？
 ### step1
