@@ -1,12 +1,22 @@
 # yii2-videojs-widget
 基于videojs开发的yii2小部件
+
+![](https://raw.githubusercontent.com/wiki/Hzhihua/yii2-videojs-widget/videojs.png)
+
 ## [videojs官网](http://videojs.com/) [GitHub](https://github.com/videojs/video.js)
+## 特色
+更新时间 2017/8/9
+1. 新增音量调节记录
+2. 新增视频播放记录（flash不支持）  
+3. 新增播放速率记录（flash不支持）
+4. 新增视频标题显示（[特感谢 青蛙哥](http://www.cnblogs.com/afrog/p/6689179.html)）
+5. 新增支持一个页面多视频播放
 ## 如何安装？？
 ### 在命令行中执行
 ```install
     composer require "hzhihua/yii2-videojs-widget:*"
 ```
-### 添加到composer.json
+### 或者直接添加到composer.json
 ```install
     "hzhihua/yii2-videojs-widget": "*"
 ```
@@ -96,5 +106,5 @@
          ]); ?>
 ```
 #### 详见
-[examples](examples)
+[examples](examples/views)
 [videojs](https://github.com/videojs/video.js/tree/master/docs/guides)

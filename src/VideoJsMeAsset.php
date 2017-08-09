@@ -10,7 +10,7 @@ namespace hzhihua\videojs;
 
 class VideoJsMeAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/hzhihua/assets';
+    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/assets';
 
     public function init()
     {
