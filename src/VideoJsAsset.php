@@ -13,7 +13,7 @@ use yii\web\View;
 
 class VideoJsAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/video.js/dist';
+    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/node_modules/video.js/dist';
 
     public function init()
     {

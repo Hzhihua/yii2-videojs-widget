@@ -10,7 +10,7 @@ namespace hzhihua\videojs;
 
 class VideoJsFlashAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/videojs-flash/dist';
+    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/node_modules/videojs-flash/dist';
 
     public function init()
     {

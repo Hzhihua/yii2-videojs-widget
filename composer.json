@@ -26,5 +26,15 @@
     	"psr-4": {
     		"hzhihua\\videojs\\": "src/"
     	}
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "npm install --save video.js",
+            "npm install --save videojs-flash"
+        ],
+        "post-update-cmd": [
+            "npm install --save video.js",
+            "npm install --save videojs-flash"
+        ]
     }
 }

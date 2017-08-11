@@ -12,7 +12,7 @@ use yii\web\View;
 
 class VideoJsLte9Asset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/video.js/dist';
+    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/node_modules/video.js/dist';
 
     public $jsOptions = [
         'condition' => 'lte IE9',
