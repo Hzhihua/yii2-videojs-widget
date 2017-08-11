@@ -23,8 +23,10 @@ composer require --prefer-dist hzhihua/yii2-videojs-widget "~1.0" && cd vendor/h
 ```
 ### 或者直接添加到composer.json
 ```install
-"hzhihua/yii2-videojs-widget": "~1.0" #添加到composer.json require配置中 别复制到"#"后面
-#在命令行中执行此命令
+1. 添加到composer.json require配置中
+"hzhihua/yii2-videojs-widget": "~1.0"
+
+2. 在命令行中执行此命令
 composer update hzhihua/yii2-videojs-widget && cd vendor/hzhihua/yii2-videojs-widget && composer update
 ```
 ## 怎么样去使用？？
