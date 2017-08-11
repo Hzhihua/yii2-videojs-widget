@@ -209,7 +209,7 @@ class VideoJsWidget extends \yii\base\Widget
     {
         $jsonOption = Json::encode($this->jsOptions);
 
-        $js = ";\$('.{$this->eachSeletor}').each(function () {";
+        $js = $this->eachSelectorBegin();
 
         if ($this->initFunction) {
             $js .= "var player = videojs('#'+this.id, $jsonOption, {$this->initFunction});";
@@ -221,7 +221,23 @@ class VideoJsWidget extends \yii\base\Widget
     }
 
     /**
-     * js 结束标签
+     * videojs eachSeletor 开始
+     * 通过对 $('.selector') 的遍历
+     * 对页面中的每个视频进行初始化
+     * @return string
+     */
+    public function eachSelectorBegin()
+    {
+        $js = ';';
+
+        $js .= "\$('.{$this->eachSeletor}').each(function () {";
+
+        return $js;
+    }
+
+    /**
+     * js 结束
+     * eachSelector 结束
      * @return string
      */
     public function videoJsEnd()

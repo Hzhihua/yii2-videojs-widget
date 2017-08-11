@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "video.js": "^6.2.4",
+    "videojs-flash": "^2.0.1"
+  }
+}
