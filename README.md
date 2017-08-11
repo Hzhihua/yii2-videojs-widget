@@ -19,11 +19,13 @@ npm --version
 ```
 ### 2. 在命令行中执行
 ```install
-composer require --prefer-dist hzhihua/yii2-videojs-widget "~1.0"
+composer require --prefer-dist hzhihua/yii2-videojs-widget "~1.0" && cd vendor/hzhihua/yii2-videojs-widget && composer update
 ```
 ### 或者直接添加到composer.json
 ```install
-"hzhihua/yii2-videojs-widget": "~1.0"
+"hzhihua/yii2-videojs-widget": "~1.0" #添加到composer.json require配置中 别复制到"#"后面
+#在命令行中执行此命令
+composer update hzhihua/yii2-videojs-widget && cd vendor/hzhihua/yii2-videojs-widget && composer update
 ```
 ## 怎么样去使用？？
 ### step1
@@ -31,10 +33,39 @@ composer require --prefer-dist hzhihua/yii2-videojs-widget "~1.0"
 use hzhihua\videojs\VideoJsWidget;
 ```
 ### step2
+#### 简单应用
+```useage
+<?= VideoJsWidget::widget([
+    'options' => [  // video tag attibutes
+        'class' => 'video-js vjs-default-skin vjs-big-play-centered',
+        'title' => $model->wuliaomiaoshu,
+        'poster' => "//vjs.zencdn.net/v/oceans.png",  // 视频播放封面地址
+        'controls' => true, // 显示控制页面
+        'width' => '300', // 设置宽度
+        'data' => [
+            'setup' => [
+                'language' => Yii::$app->language, // 设置语言
+            ],
+        ],
+    ],
+    'jsOptions' => [
+        'playbackRates' => [0.5, 1, 1.5, 2],  // 播放速率选项
+    ],
+    'tags' => [
+        'source' => [
+            ['src' => '//vjs.zencdn.net/v/oceans.mp4', 'type' => 'video/mp4'],
+        ],
+        'p' => [
+            ['content' => '您的浏览器不支持媒体播放'],
+        ],
+    ]
+]);
+?>
+```
+#### 详细应用
 ```usage
 <?= VideoJsWidget::widget([
      'options' => [  // video tag attibutes
-//            'id' => 'video',  // id值  ==>  id=""
          'class' => 'video-js vjs-default-skin vjs-big-play-centered',
          'title' => '这里是视频标题',
          'poster' => "//vjs.zencdn.net/v/oceans.png",  // 视频播放封面地址
@@ -46,10 +77,10 @@ use hzhihua\videojs\VideoJsWidget;
          'loop' => false, // 循环播放
          'hidden' => false, // 是否隐藏
          'width' => '500',
-//            'height' => '260',
+//       'height' => '260',
          'data' => [
              'setup' => [
-//                    'aspectRatio' => '16:9',  // responsive 响应式比例
+//               'aspectRatio' => '16:9',  // responsive 响应式比例
                  'techOrder' => ['html5', 'flash'],  // 默认HTML5播放  不支持HTML5自动转flash播放
                  'language' => Yii::$app->language,
              ],
