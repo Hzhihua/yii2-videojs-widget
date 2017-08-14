@@ -34,7 +34,7 @@ composer update "hzhihua/yii2-videojs-widget"
 <?= \hzhihua\videojs\VideoJsWidget::widget([
     'options' => [  // video tag attibutes
         'class' => 'video-js vjs-default-skin vjs-big-play-centered',
-        'title' => $model->wuliaomiaoshu,
+        'title' => '这里是视频标题',
         'poster' => "//vjs.zencdn.net/v/oceans.png",  // 视频播放封面地址
         'controls' => true, // 显示控制页面
         'width' => '300', // 设置宽度
