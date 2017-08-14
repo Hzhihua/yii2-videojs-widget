@@ -11,33 +11,27 @@
 3. 新增播放速率记录（flash不支持）
 4. 新增视频标题显示（[特感谢 青蛙哥](http://www.cnblogs.com/afrog/p/6689179.html)）
 5. 新增支持一个页面多视频播放
-## 如何安装？？
-### 1. 需先安装npm命令[(没有npm命令？？)](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/00143450141843488beddae2a1044cab5acb5125baf0882000)
-查看是否安装成功
-```npm
-npm --version
-```
-### 2. 在命令行中执行
-```install
-composer require --prefer-dist hzhihua/yii2-videojs-widget "~1.0" && cd vendor/hzhihua/yii2-videojs-widget && composer update
-```
-### 或者直接添加到composer.json
-```install
-1. 添加到composer.json require配置中
-"hzhihua/yii2-videojs-widget": "~1.0"
 
-2. 在命令行中执行此命令
-composer update hzhihua/yii2-videojs-widget && cd vendor/hzhihua/yii2-videojs-widget && composer update
+## 安装
+
+### 1. 在命令行中执行
+```install
+composer require --prefer-dist "hzhihua/yii2-videojs-widget:~1.0"
 ```
-## 怎么样去使用？？
-### step1
-```usage
-use hzhihua\videojs\VideoJsWidget;
+### 2. 或者添加到composer.json require配置中
+```install
+"hzhihua/yii2-videojs-widget": "~1.0"
 ```
-### step2
-#### 简单应用
+命令行运行
+```code
+composer update "hzhihua/yii2-videojs-widget"
+```
+若提示输入token，输入[GitHub token](http://www.cnblogs.com/Hzhihua/p/7064976.html)
+
+## 使用
+### 简单应用
 ```useage
-<?= VideoJsWidget::widget([
+<?= \hzhihua\videojs\VideoJsWidget::widget([
     'options' => [  // video tag attibutes
         'class' => 'video-js vjs-default-skin vjs-big-play-centered',
         'title' => $model->wuliaomiaoshu,
@@ -64,9 +58,9 @@ use hzhihua\videojs\VideoJsWidget;
 ]);
 ?>
 ```
-#### 详细应用
+### 详细应用
 ```usage
-<?= VideoJsWidget::widget([
+<?= \hzhihua\videojs\VideoJsWidget::widget([
      'options' => [  // video tag attibutes
          'class' => 'video-js vjs-default-skin vjs-big-play-centered',
          'title' => '这里是视频标题',

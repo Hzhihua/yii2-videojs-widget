@@ -11,7 +11,6 @@ use hzhihua\videojs\VideoJsWidget;
 ?>
 <?= VideoJsWidget::widget([
         'options' => [  // video tag attibutes
-//            'id' => 'video',  // id值  ==>  id=""
             'class' => 'video-js vjs-default-skin vjs-big-play-centered',
             'title' => '这里是视频标题',
             'poster' => "//vjs.zencdn.net/v/oceans.png",  // 视频播放封面地址

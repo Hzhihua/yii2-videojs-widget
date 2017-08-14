@@ -15,6 +15,7 @@ class VideoJsMeAsset extends \yii\web\AssetBundle
     public function init()
     {
         parent::init();
+
         $this->js = array_merge($this->js, $this->getJs());
         $this->css = array_merge($this->css, $this->getCss());
         $this->depends = array_merge($this->depends, $this->getDepends());

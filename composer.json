@@ -20,21 +20,22 @@
         }
     ],
     "require": {
-    	"yiisoft/yii2": "~2.0"
+    	"yiisoft/yii2": "~2.0",
+        "npm-asset/video.js": "~6.0",
+        "npm-asset/videojs-flash": "~2.0"
     },
     "autoload": {
     	"psr-4": {
     		"hzhihua\\videojs\\": "src/"
     	}
     },
-    "scripts": {
-        "post-install-cmd": [
-            "npm install --save video.js",
-            "npm install --save videojs-flash"
-        ],
-        "post-update-cmd": [
-            "npm install --save video.js",
-            "npm install --save videojs-flash"
-        ]
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset":{
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
     }
 }

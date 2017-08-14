@@ -10,11 +10,12 @@ namespace hzhihua\videojs;
 
 class VideoJsFlashAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/hzhihua/yii2-videojs-widget/node_modules/videojs-flash/dist';
+    public $sourcePath = '@npm/videojs-flash/dist';
 
     public function init()
     {
         parent::init();
+
         $this->js = array_merge($this->js, $this->getJs());
         $this->css = array_merge($this->css, $this->getCss());
         $this->depends = array_merge($this->depends, $this->getDepends());
@@ -25,7 +26,6 @@ class VideoJsFlashAsset extends \yii\web\AssetBundle
         return [
             'yii\\web\\JqueryAsset',
             'yii\\bootstrap\\BootstrapAsset',
-            VideoJsLte9Asset::className(),
         ];
     }
 

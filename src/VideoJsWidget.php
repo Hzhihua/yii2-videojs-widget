@@ -188,15 +188,16 @@ class VideoJsWidget extends \yii\base\Widget
     public function getRegisterJs()
     {
         $js  = '';
-
-        $js .= $this->videoJsInit(); // start
+        
+        $js .= $this->eachSelectorBegin(); // start
+        $js .= $this->videoJsInstance(); // instance
         $js .= $this->addTitleBar();
         $js .= $this->getPauseEvent();
         $js .= $this->getPlayEvent();
         $js .= $this->getTimeUpdateEvent();
         $js .= $this->getVolumeChangeEvent();
         $js .= $this->getPlaybackRateEvent();
-        $js .= $this->videoJsEnd(); // end
+        $js .= $this->eachSelectorEnd(); // end
 
         return $js;
 
@@ -205,11 +206,11 @@ class VideoJsWidget extends \yii\base\Widget
     /**
      * videojs 初始化
      */
-    public function videoJsInit()
+    public function videoJsInstance()
     {
         $jsonOption = Json::encode($this->jsOptions);
 
-        $js = $this->eachSelectorBegin();
+        $js = '';
 
         if ($this->initFunction) {
             $js .= "var player = videojs('#'+this.id, $jsonOption, {$this->initFunction});";
@@ -236,11 +237,10 @@ class VideoJsWidget extends \yii\base\Widget
     }
 
     /**
-     * js 结束
      * eachSelector 结束
      * @return string
      */
-    public function videoJsEnd()
+    public function eachSelectorEnd()
     {
         $js = '});';
         return $js;
