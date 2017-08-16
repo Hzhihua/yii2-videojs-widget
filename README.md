@@ -1,5 +1,5 @@
 # yii2-videojs-widget
-基于videojs开发的yii2小部件
+> 基于 **videojs 6.0** **videojs-falsh 2.0** 开发的yii2小部件
 
 ![](https://raw.githubusercontent.com/wiki/Hzhihua/yii2-videojs-widget/videojs.png)
 
