@@ -13,7 +13,11 @@
 5. 新增支持一个页面多视频播放
 
 ## 安装
-
+[没有composer？？](https://getcomposer.org/download/)
+### 0. 全局安装
+```must
+composer global require "fxp/composer-asset-plugin:^1.3.1"
+```
 ### 1. 在命令行中执行
 ```install
 composer require --prefer-dist "hzhihua/yii2-videojs-widget:~1.0"
