@@ -30,7 +30,7 @@ composer require --prefer-dist "hzhihua/yii2-videojs-widget:~1.0"
 ```code
 composer update "hzhihua/yii2-videojs-widget"
 ```
-若提示输入token，输入[GitHub token](http://www.cnblogs.com/Hzhihua/p/7064976.html)
+若提示输入token，输入[Personal access tokens](https://github.com/settings/tokens)
 
 ## 使用
 ### 简单应用
