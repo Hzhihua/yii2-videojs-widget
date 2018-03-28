@@ -13,15 +13,15 @@ use yii\web\View;
 
 class VideoJsAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@npm/video.js/dist';
+    public $sourcePath = '@vendor/npm-asset/video.js/dist';
 
     public function init()
     {
         parent::init();
 
-        $this->js = array_merge($this->js, $this->getJs());
-        $this->css = array_merge($this->css, $this->getCss());
-        $this->depends = array_merge($this->depends, $this->getDepends());
+        $this->js = array_merge($this->getJs(), $this->js);
+        $this->css = array_merge($this->getCss(), $this->css);
+        $this->depends = array_merge($this->getDepends(), $this->depends);
     }
 
     public function getDepends()
@@ -34,9 +34,10 @@ class VideoJsAsset extends \yii\web\AssetBundle
 
     public function getJs()
     {
+        $language = VideoJsWidget::getLanguage();
         return [
         	'video.min.js',
-            'lang/' . Yii::$app->language . '.js',
+            "lang/{$language}.js",
         ];
     }
 

@@ -16,17 +16,17 @@ class VideoJsMeAsset extends \yii\web\AssetBundle
     {
         parent::init();
 
-        $this->js = array_merge($this->js, $this->getJs());
-        $this->css = array_merge($this->css, $this->getCss());
-        $this->depends = array_merge($this->depends, $this->getDepends());
+        $this->js = array_merge($this->getJs(), $this->js);
+        $this->css = array_merge($this->getCss(), $this->css);
+        $this->depends = array_merge($this->getDepends(), $this->depends);
     }
 
     public function getDepends()
     {
         return [
             'yii\\web\\JqueryAsset',
-            VideoJsAsset::className(),
-            VideoJsFlashAsset::className(),
+            VideoJsAsset::class,
+            VideoJsFlashAsset::class,
         ];
     }
 

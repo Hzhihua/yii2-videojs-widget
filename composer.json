@@ -20,9 +20,8 @@
         }
     ],
     "require": {
-    	"yiisoft/yii2": "~2.0",
-        "npm-asset/video.js": "~6.0",
-        "npm-asset/videojs-flash": "~2.0"
+        "php": ">=5.5.0",
+        "npm-asset/video.js": "~v6.7.0"
     },
     "autoload": {
     	"psr-4": {
@@ -31,11 +30,17 @@
     },
     "config": {
         "process-timeout": 1800,
-        "fxp-asset":{
-            "installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            }
+        "fxp-asset": {
+            "enabled": false
         }
-    }
+    },
+    "extra": {
+        "installer-types": ["bower-asset", "npm-asset"]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
 }

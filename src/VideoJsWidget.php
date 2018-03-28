@@ -15,14 +15,48 @@
 
 namespace hzhihua\videojs;
 
+use Yii;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\base\InvalidConfigException;
 
-
+/**
+ * 详细的使用信息请查看 examples 目录
+ *
+ * 简单应用：
+ * ```php
+ * <?= \hzhihua\videojs\VideoJsWidget::widget([
+ *     'options' => [  // video tag attibutes
+ *         'class' => 'video-js vjs-default-skin vjs-big-play-centered',
+ *         'title' => '这里是视频标题',
+ *         'poster' => "//vjs.zencdn.net/v/oceans.png",  // 视频播放封面地址
+ *         'controls' => true, // 显示控制页面
+ *         'width' => '300', // 设置宽度
+ *         'data' => [
+ *             'setup' => [
+ *                 'language' => \hzhihua\videojs\VideoJsWidget::getLanguage(), // 设置语言
+ *             ],
+ *         ],
+ *     ],
+ *     'jsOptions' => [
+ *         'playbackRates' => [0.5, 1, 1.5, 2],  // 播放速率选项
+ *     ],
+ *     'tags' => [
+ *         'source' => [
+ *             ['src' => '//vjs.zencdn.net/v/oceans.mp4', 'type' => 'video/mp4'],
+ *         ],
+ *         'p' => [
+ *             ['content' => '您的浏览器不支持媒体播放'],
+ *         ],
+ *     ]
+ * ]);
+ * ?>
+ * ```
+ *
+ * @Github: https://github.com/Hzhihua/yii2-videojs-widget
+ */
 class VideoJsWidget extends \yii\base\Widget
 {
-
     /**
      * video/object 标签属性
      * width/height 会生成style属性
@@ -201,6 +235,17 @@ class VideoJsWidget extends \yii\base\Widget
 
         return $js;
 
+    }
+
+    /**
+     * 获取语言
+     * @param string $language
+     * @return string
+     */
+    public static function getLanguage($language = null)
+    {
+        (null === $language) && $language = Yii::$app->language;
+        return $language === 'en-US' ? 'en' : $language;
     }
 
     /**

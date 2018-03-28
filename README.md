@@ -13,18 +13,14 @@
 5. 新增支持一个页面多视频播放
 
 ## 安装
-[没有composer？？](https://getcomposer.org/download/)
-### 0. 全局安装
-```must
-composer global require "fxp/composer-asset-plugin:^1.3.1"
-```
+
 ### 1. 在命令行中执行
 ```install
-composer require --prefer-dist "hzhihua/yii2-videojs-widget:~1.0"
+composer require "hzhihua/yii2-videojs-widget:*"
 ```
 ### 2. 或者添加到composer.json require配置中
 ```install
-"hzhihua/yii2-videojs-widget": "~1.0"
+"hzhihua/yii2-videojs-widget": "*"
 ```
 命令行运行
 ```code
@@ -44,7 +40,7 @@ composer update "hzhihua/yii2-videojs-widget"
         'width' => '300', // 设置宽度
         'data' => [
             'setup' => [
-                'language' => Yii::$app->language, // 设置语言
+                'language' => \hzhihua\videojs\VideoJsWidget::getLanguage(), // 设置语言
             ],
         ],
     ],

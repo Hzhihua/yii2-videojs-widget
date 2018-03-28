@@ -10,15 +10,14 @@ namespace hzhihua\videojs;
 
 class VideoJsFlashAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@npm/videojs-flash/dist';
 
     public function init()
     {
         parent::init();
 
-        $this->js = array_merge($this->js, $this->getJs());
-        $this->css = array_merge($this->css, $this->getCss());
-        $this->depends = array_merge($this->depends, $this->getDepends());
+        $this->js = array_merge($this->getJs(), $this->js);
+        $this->css = array_merge($this->getCss(), $this->css);
+        $this->depends = array_merge($this->getDepends(), $this->depends);
     }
 
     public function getDepends()
@@ -32,7 +31,7 @@ class VideoJsFlashAsset extends \yii\web\AssetBundle
     public function getJs()
     {
         return [
-            'videojs-flash.min.js',
+            'https://cdn.jsdelivr.net/npm/videojs-flash@2/dist/videojs-flash.min.js',
         ];
     }
 

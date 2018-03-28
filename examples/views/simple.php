@@ -27,7 +27,7 @@ use hzhihua\videojs\VideoJsWidget;
                 'setup' => [
 //                    'aspectRatio' => '16:9',  // responsive 响应式比例
                     'techOrder' => ['html5', 'flash'],  // 默认HTML5播放  不支持HTML5自动转flash播放
-                    'language' => Yii::$app->language,
+                    'language' => VideoJsWidget::getLanguage(),
                 ],
             ],
         ],
